@@ -36,10 +36,15 @@ Get-FileHash .\fudeya-bunzo-1.0.0-windows-x64.zip -Algorithm SHA256
 
 筆屋文蔵には、コード署名をしていません。そのため、初めて起動する時に Windows の SmartScreen がこの画面を出すことがあります。
 
-（ここに画面の写真を入れる）
-
 1. 「詳細情報」を押します
-2. 「アプリ」が `bunzo.exe` であることを確かめ、［実行］を押します
+
+   <img src="images/smartscreen-1.png" alt="「Windows によって PC が保護されました」の画面。「詳細情報」と［実行しない］がある" width="400">
+
+2. 「アプリ」が `bunzo.exe`、「発行元」が「不明な発行元」と出ます。［実行］を押します
+
+   <img src="images/smartscreen-2.png" alt="「詳細情報」を押した後の画面。アプリ: bunzo.exe、発行元: 不明な発行元、［実行］と［実行しない］がある" width="400">
+
+一度［実行］を押せば、同じ `bunzo.exe` を次に起動する時には出ません（ZIP を別の場所に解凍し直した時は、また出ます）。
 
 ### .md ファイルをダブルクリックで開くには
 
