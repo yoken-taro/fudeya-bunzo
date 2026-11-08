@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>操作説明書 | 筆屋文蔵</title>
+  <meta name="description" content="筆屋文蔵の操作説明書。起動と保存、見出しや文字の装飾、表・画像・リンクの編集、検索と置換、設定とバックアップの使い方を紹介します。">
+  <link rel="canonical" href="https://yoken-taro.github.io/fudeya-bunzo/manual.html">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>
+    :root{color-scheme:light;--bg:#eef0f3;--ink:#1f2328;--soft:#4b5563;--rule:#d5dae1;--accent:#2f5faf;--paper:#fff;--code:#f5f6f8}
+    *{box-sizing:border-box}html{scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Gothic UI","Meiryo",sans-serif;font-size:16px;line-height:1.85;overflow-wrap:anywhere}
+    a{color:var(--accent);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:2px}
+    .wrap{max-width:1100px;margin:auto;padding:28px 24px 64px}.skip{position:absolute;left:16px;top:-80px;padding:8px 16px;background:white}.skip:focus{top:8px}
+    .topline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px}.topline a{text-decoration:none}header{padding:20px 0 24px}h1{font-size:30px;line-height:1.4;margin:10px 0}header p{margin:0;color:var(--soft)}.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--accent)}
+    .layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:32px;align-items:start}.toc{position:sticky;top:24px;padding:16px;background:white;border:1px solid var(--rule);border-radius:6px;font-size:14px}.toc h2{font-size:14px;margin:0 0 8px}.toc ol{margin:0;padding-left:1.6em}.toc li{padding:3px 0}.toc a{text-decoration:none}.toc a:hover{text-decoration:underline}
+    main{min-width:0}section{margin:0 0 40px}h2{font-size:21px;line-height:1.5;margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid var(--ink)}h2 .num{color:var(--accent);font-size:14px;margin-right:10px}h3{font-size:17px;margin:24px 0 8px}p{margin:8px 0 14px}ul,ol{padding-left:1.6em;margin:8px 0 16px}li+li{margin-top:5px}.card{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:20px 24px}.card>:first-child{margin-top:0}.card>:last-child{margin-bottom:0}
+    .note{border-left:3px solid var(--accent);background:#e6edf8;padding:12px 16px;margin:16px 0;font-size:14px}.note strong{display:block}.warning{border-left-color:#9a5b00;background:#fff6e5}kbd,code,pre{font-family:"BIZ UDGothic","Consolas","Meiryo",monospace}kbd{display:inline-block;white-space:nowrap;background:white;border:1px solid #c6ccd4;border-bottom-width:2px;border-radius:4px;padding:0 5px;font-size:.85em;line-height:1.7}code{background:#e5e8ed;padding:2px 5px;border-radius:3px;font-size:.9em}pre{background:var(--code);border:1px solid var(--rule);border-radius:4px;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.8}pre code{padding:0;background:none;font-size:inherit}
+    .table-scroll{overflow-x:auto;margin:12px 0 16px}table{border-collapse:collapse;width:100%;font-size:14px;background:white}caption{text-align:left;font-weight:600;margin-bottom:8px}th,td{border:1px solid var(--rule);padding:9px 12px;text-align:left;vertical-align:top}th{background:#f6f7f9;font-weight:600}td:first-child{min-width:115px}.keys td:last-child{min-width:155px}.small{font-size:14px;color:var(--soft)}
+    figure{margin:18px 0}figcaption{font-size:13px;color:var(--soft);margin-top:8px}.app-diagram{border:1px solid #9aa3ae;border-radius:4px;overflow:hidden;background:white;font-size:13px}.app-title{padding:6px 14px;border-bottom:1px solid var(--rule)}.app-menu{padding:5px 14px;border-bottom:1px solid var(--rule);color:var(--soft)}.app-toolbar{background:#f3f4f6;border-bottom:1px solid var(--rule);padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px 16px}.app-content{padding:20px 24px 26px}.app-content p{margin:8px 0}.app-heading{font-size:21px;font-weight:700;border-bottom:1px solid var(--rule);padding-bottom:4px}.app-status{padding:4px 14px;text-align:right;background:#f3f4f6;border-top:1px solid var(--rule);font-size:12px}.tag{font-size:11px;color:var(--accent);margin-right:6px;font-weight:700}
+    .back{font-size:13px;text-align:right;margin-top:12px}.back a{text-decoration:none}footer{border-top:1px solid var(--rule);margin-top:24px;padding-top:18px;font-size:14px;color:var(--soft);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}summary{cursor:pointer;font-weight:600;color:var(--accent);padding:8px 0}details{border-bottom:1px solid var(--rule);padding:4px 0}details p{padding:0 4px;font-size:15px}
+    @media(max-width:760px){.wrap{padding:20px 16px 40px}.layout{display:block}.toc{position:static;margin-bottom:32px}.toc ol{columns:2;column-gap:28px}.toc li{break-inside:avoid}h1{font-size:26px}.card{padding:16px}h2{font-size:20px}th,td{padding:8px}section{margin-bottom:32px}}
+    @media(max-width:380px){.toc ol{columns:1}}
+    @media print{body{background:white;font-size:11pt}.wrap{max-width:none;padding:0}.layout{display:block}.toc{position:static;break-after:page}.toc ol{columns:2}.topline,.back,.skip{display:none}section{break-inside:auto}h2,h3{break-after:avoid}.card,figure,tr,.note{break-inside:avoid}.card{padding:12px}a{color:inherit}.table-scroll{overflow:visible}details:not([open]){display:none}footer{margin-top:20px}}
+  </style>
+</head>
+<body id="top">
+<a class="skip" href="#main">本文へスキップ</a>
+<div class="wrap">
+  <div class="topline"><a href="./">← 筆屋文蔵のサイトへ</a><a href="https://github.com/yoken-taro/fudeya-bunzo/releases/latest">最新版のダウンロード</a></div>
+  <header><div class="eyebrow">FUDEYA BUNZO / USER GUIDE</div><h1>筆屋文蔵 操作説明書</h1><p>書き始めるところから、表や画像の編集まで。<br>Markdownの記号を覚えなくても、メニューとボタンで操作できます。</p></header>
+  <div class="layout">
+    <nav class="toc" aria-label="操作説明書の目次"><h2>目次</h2><ol>
+      <li><a href="#start">使い始める</a></li><li><a href="#screen">画面の見方</a></li><li><a href="#files">開く・保存する</a></li><li><a href="#writing">文章を書く・整える</a></li><li><a href="#tables">表を編集する</a></li><li><a href="#paste">コピーと貼り付け</a></li><li><a href="#links">リンクを入れる</a></li><li><a href="#images">画像を入れる</a></li><li><a href="#code">コードとソース表示</a></li><li><a href="#find">検索・置換する</a></li><li><a href="#settings">設定を変える</a></li><li><a href="#backup">バックアップと復元</a></li><li><a href="#shortcuts">ショートカット一覧</a></li><li><a href="#help">困ったときは</a></li>
+    </ol></nav>
+    <main id="main">
+      <section id="start"><h2><span class="num">01</span>使い始める</h2>
+        <div class="card"><ol><li><a href="https://github.com/yoken-taro/fudeya-bunzo/releases/latest">最新リリースのページ</a>を開き、Assets にある Windows 用の ZIP をダウンロードします。</li><li>ZIPを右クリックし、［すべて展開］で、書き込みのできるフォルダに展開します。</li><li>展開したフォルダの <code>bunzo.exe</code> をダブルクリックします。インストールは不要です。</li><li>文章を入力し、<kbd>Ctrl</kbd> + <kbd>S</kbd> で名前を付けて保存します。</li></ol></div>
+        <p class="small">対応環境は Windows 11（64ビット）です。配布ZIP内の利用規約もご確認ください。</p>
+        <div class="note"><strong>初回起動時に確認画面が出たら</strong>「WindowsによってPCが保護されました」と表示されることがあります。配布元を確認のうえ、<a href="https://github.com/yoken-taro/fudeya-bunzo#使い始め方">READMEの画面付き手順</a>をご確認ください。</div>
+      </section>
+      <section id="screen"><h2><span class="num">02</span>画面の見方</h2>
+        <figure><div class="app-diagram" role="img" aria-label="画面の構成図。上からタイトル、メニュー、ツールバー、編集領域、ステータスバーが並びます。">
+          <div class="app-title"><span class="tag">① タイトル</span>メモ.md — 筆屋文蔵</div>
+          <div class="app-menu"><span class="tag">② メニュー</span>ファイル　編集　表示　挿入　書式　ヘルプ</div>
+          <div class="app-toolbar"><span class="tag">③ ツールバー</span><span>本文 ▾</span><span><b>太字</b>　斜体　取消線</span><span>箇条書き　表　リンク　画像</span></div>
+          <div class="app-content"><span class="tag">④ 編集領域</span><p class="app-heading">今日のメモ</p><p>この場所に文章を書きます。</p><p>・見出しや表も、同じ画面で編集できます。</p></div>
+          <div class="app-status"><span class="tag">⑤ ステータスバー</span>文字数　｜　UTF-8　｜　LF</div>
+        </div><figcaption>画面の構成図です。実際のボタンの並びは、ウィンドウの幅などで変わります。</figcaption></figure>
+        <ul><li><strong>タイトル</strong>には開いているファイル名が表示されます。変更してまだ保存していない文書には、その印が付きます。</li><li><strong>メニュー・ツールバー</strong>から保存、書式の変更、表や画像の挿入などを選びます。幅が足りないときは、ツールバーの［≫］から残りのボタンを使えます。</li><li><strong>編集領域</strong>では、文章を見た目のまま編集します。カーソルのある場所では、Markdownの記号が表示されることがあります。</li><li><strong>ステータスバー</strong>では文字数、文字コード、改行コードを確認できます。文字を選ぶと選択範囲の文字数も表示されます。</li></ul>
+        <p>ツールバーは［表示］→［ツールバー］で表示・非表示を切り替えられます。</p>
+      </section>
+      <section id="files"><h2><span class="num">03</span>開く・保存する</h2>
+        <div class="table-scroll"><table><caption>ファイルの基本操作</caption><thead><tr><th scope="col">やりたいこと</th><th scope="col">操作</th></tr></thead><tbody>
+          <tr><td>新しい文書を書く</td><td>［ファイル］→［新規ウィンドウ］（<kbd>Ctrl+N</kbd>）。別のウィンドウが開きます。</td></tr>
+          <tr><td>文書を開く</td><td>［ファイル］→［開く］（<kbd>Ctrl+O</kbd>）。Markdown（.md / .markdown）やテキストファイルを選びます。ファイルをウィンドウにドラッグ＆ドロップしても開けます。</td></tr>
+          <tr><td>保存する</td><td>［ファイル］→［上書き保存］（<kbd>Ctrl+S</kbd>）。新規文書では保存先と名前を選びます。</td></tr>
+          <tr><td>別の名前で保存する</td><td>［ファイル］→［名前を付けて保存］（<kbd>Ctrl+Shift+S</kbd>）。</td></tr>
+          <tr><td>ウィンドウを閉じる</td><td>［ファイル］→［閉じる］（<kbd>Ctrl+W</kbd>）。未保存の変更があれば、保存するか確認されます。</td></tr>
+        </tbody></table></div>
+        <p>新規で何も入力していないウィンドウでは、そのまま文書を開きます。それ以外は新しいウィンドウで開くので、今の文書を残して作業できます。</p>
+        <h3>文字コードと改行コード</h3><p>新規文書は UTF-8（BOMなし）で保存されます。既存の文書は、読み込んだ文字コードや改行コードを引き継ぎます。改行コードが混在している文書は、保存時に統一する種類を選びます。</p>
+        <p>文字化けして見える場合は、［ファイル］→［文字コードを指定して開き直す］から UTF-8 / UTF-16 LE / UTF-16 BE / Shift_JIS を選びます。画面下の文字コード表示をクリックしても選べます。</p>
+        <div class="note warning"><strong>読み取り専用の文書</strong>読み取り専用の表示がある場合は編集できません。［名前を付けて保存］で書き込みのできる場所に保存すると、編集できるようになります。</div>
+      </section>
+      <section id="writing"><h2><span class="num">04</span>文章を書く・整える</h2>
+        <h3>段落と改行</h3><p>普通の文章で <kbd>Enter</kbd> を押すと、新しい段落になります。同じ段落の中で行を変えたいときは <kbd>Shift+Enter</kbd> を使います。</p>
+        <h3>見出しを付ける</h3><ol><li>見出しにしたい行にカーソルを置きます。</li><li>ツールバーの［本文 ▾］から［見出し 1］〜［見出し 6］を選びます。［書式］メニューからも選べます。</li><li>通常の文章に戻すには［本文］を選びます。</li></ol><p class="small">見出しは <kbd>Ctrl+1</kbd> 〜 <kbd>Ctrl+6</kbd>、本文は <kbd>Ctrl+0</kbd> でも指定できます。</p>
+        <h3>太字・斜体・取消線・文中コード</h3><p>装飾したい文字を選んでから、ツールバーや［書式］メニューの項目を選びます。すでに装飾された文字の中にカーソルを置いて同じ操作をすると、その装飾を解除できます。</p>
+        <div class="note">文字を選んでいないときなど、現在の場所で使えないボタンは灰色になります。太字などを付けるときは、まず対象の文字を選んでください。</div>
+        <h3>箇条書き・番号リスト・タスク</h3><ul><li>行にカーソルを置き、［箇条書き］［番号リスト］［タスク］を選びます。</li><li><kbd>Enter</kbd> で次の項目が作られます。空の項目で <kbd>Enter</kbd> を押すと、リストを抜けます。入れ子の場合は1段浅くなります。</li><li><kbd>Tab</kbd> で項目を1段深くし、<kbd>Shift+Tab</kbd> で1段浅くします。</li><li>タスクはチェックボックスをクリックして完了・未完了を切り替えます。</li></ul>
+        <h3>引用・水平線</h3><p>引用にしたい行で［引用］を選びます。引用内では <kbd>Enter</kbd> で引用を続け、空の引用行で <kbd>Enter</kbd> を押すと抜けられます。区切りを入れたい場所では［挿入］→［水平線］を選びます。</p>
+        <h3>操作を取り消す</h3><p><kbd>Ctrl+Z</kbd> で元に戻し、<kbd>Ctrl+Y</kbd> でやり直せます。</p>
+      </section>
+      <section id="tables"><h2><span class="num">05</span>表を編集する</h2>
+        <h3>表を作る</h3><ol><li>表を入れたい場所にカーソルを置き、ツールバーの［表 ▾］を押します。</li><li>マス目で大きさを選びます。数字で指定する場合は、［挿入］→［表］（<kbd>Ctrl+T</kbd>）を選びます。</li><li>「列の数」と「行の数（見出しを含む）」を入力し、［挿入］を押します。各1〜99を指定できます。</li><li>セルをクリックして内容を入力します。一番上の行は見出し行です。</li></ol>
+        <div class="table-scroll"><table><caption>表の中で使うキー</caption><thead><tr><th scope="col">キー</th><th scope="col">動き</th></tr></thead><tbody><tr><td><kbd>Tab</kbd> / <kbd>Shift+Tab</kbd></td><td>次 / 前のセルへ移動します。最後のセルで Tab を押すと行を追加します。</td></tr><tr><td><kbd>Enter</kbd></td><td>下のセルへ移動します。最後の行では行を追加します。</td></tr><tr><td><kbd>Shift+Enter</kbd></td><td>セルの中で改行します。「HTMLタグを使う」が有効な場合は、改行が <code>&lt;br&gt;</code> として保存されます。無効の場合は空白になります。</td></tr><tr><td><kbd>Esc</kbd></td><td>セルの編集を抜けます。</td></tr></tbody></table></div>
+        <h3>行・列の追加、削除、文字の揃え方</h3><p>対象のセルを右クリックして、［行を上に追加］［行を下に追加］［列を左に追加］［列を右に追加］、［左揃え］［中央揃え］［右揃え］などを選びます。表の操作バーからも操作できます。</p><p>見出し行と最後の1列は削除できません。表全体を消す場合は［表を削除］を選びます。</p>
+      </section>
+      <section id="paste"><h2><span class="num">06</span>コピーと貼り付け</h2>
+        <div class="card"><ul><li><strong>Excelのセル範囲</strong>をコピーして本文に <kbd>Ctrl+V</kbd> で貼り付けると、Markdownの表に変換されます。</li><li><strong>WordやWebページ</strong>からは、見出し・リスト・表などをMarkdownに変換して貼り付けます。元のレイアウトや装飾をすべて再現するわけではありません。</li><li><strong>文字だけを貼りたいとき</strong>は <kbd>Ctrl+Shift+V</kbd>（プレーンテキストとして貼り付け）を使います。</li><li><strong>スクリーンショットなどの画像</strong>も <kbd>Ctrl+V</kbd> で貼り付けられます。保存先については<a href="#images">「画像を入れる」</a>をご覧ください。</li></ul></div>
+        <p>コードブロックや文中コードなどの中では、書式を変換せず文字として貼り付けます。</p>
+      </section>
+      <section id="links"><h2><span class="num">07</span>リンクを入れる</h2>
+        <ol><li>リンクにしたい文字を選び、［リンク］（<kbd>Ctrl+K</kbd>）を押します。文字を選ばずに開くこともできます。</li><li>［表示する文字］と［リンク先（URL）］を入力して［挿入］を押します。</li></ol>
+        <p>文字を選んだ状態でURLを貼り付ける方法でも、リンクを作れます。</p>
+        <h3>リンクを開く・変更する</h3><p><kbd>Ctrl</kbd> を押しながらリンクをクリックすると開きます。右クリックの［リンクを開く］も使えます。</p><p>リンク先を変えるには、リンクの中にカーソルを置いて <kbd>Ctrl+K</kbd>、または右クリック→［リンクを編集］を選びます。表示する文字そのものは本文で編集します。</p>
+      </section>
+      <section id="images"><h2><span class="num">08</span>画像を入れる</h2>
+        <h3>パソコンの画像・スクリーンショットを入れる</h3><p>［挿入］→［画像］（<kbd>Ctrl+Shift+I</kbd>）でファイルを選ぶか、画像ファイルをドラッグ＆ドロップします。クリップボードの画像は <kbd>Ctrl+V</kbd> で貼り付けられます。</p>
+        <p>画像は文書と同じ場所にある <code>images</code> フォルダ（設定で変更できます）へコピーされます。初めて必要になったときは、フォルダを作成するか確認されます。まだ保存していない文書では一時的に保持し、文書を初めて保存するときに保存先へ移します。</p>
+        <div class="note"><strong>文書を移動・共有するとき</strong>Markdownファイルと画像フォルダを一緒に移動してください。画像の説明文だけが文書に含まれ、画像ファイル自体は別に保存されています。</div>
+        <h3>画像の右クリックメニュー</h3><ul><li>［画像を差し替え］で別の画像に変えます。</li><li>［画像の説明（alt）を編集］で、画像の説明文を入力します。</li><li>［元の場所を参照］や［URL を参照］で、コピーせずに別の場所の画像を参照できます。</li><li>参照中の画像を文書と一緒に保管したいときは［このフォルダにコピー］を使います。</li><li>ローカル画像では［ファイルの場所を開く］で保存場所を確認できます。</li></ul>
+        <h3>Web上の画像</h3><p>Webの画像はURL参照として貼り付けられる場合があります。外部画像の読み込みを止めたいときは、［設定］の［外部（https）の画像を表示する］をオフにします。</p>
+        <p class="small">画像の挿入を元に戻しても、コピー済みの画像ファイルは自動削除されません。</p>
+      </section>
+      <section id="code"><h2><span class="num">09</span>コードとソース表示</h2>
+        <h3>コードブロックを入れる</h3><p>［挿入］→［コードブロック］（<kbd>Ctrl+Shift+K</kbd>）でコードを書く領域を入れます。ブロック右上の言語の選択から、表示する言語を指定できます。短い語句をコードにする場合は、その文字を選んで［文中コード］を使います。</p>
+        <h3>Markdownの記号を直接編集する</h3><p>［表示］→［ソース表示］（<kbd>Ctrl+/</kbd>）で、Markdownの記号を含む表示に切り替えます。同じ操作で元に戻ります。表や書式の記法を直接確認・修正したいときに使えます。</p>
+        <p>たとえば、次のような文字で見出しやリストが表現されています。</p><pre><code># 今日のメモ
+
+## やること
+
+- 原稿を書く
+- 内容を確認する
+
+**大切なこと**を太字にする。</code></pre>
+        <p class="small">保存されるのはMarkdownのテキストです。通常表示とソース表示で、別々のファイルになることはありません。</p>
+      </section>
+      <section id="find"><h2><span class="num">10</span>検索・置換する</h2>
+        <ol><li><kbd>Ctrl+F</kbd> で検索バーを開き、探したい文字を入力します。</li><li><kbd>Enter</kbd> で次、<kbd>Shift+Enter</kbd> で前の一致箇所へ移動します。［↑］［↓］も使えます。</li><li>閉じるときは <kbd>Esc</kbd> または［×］を押します。</li></ol>
+        <h3>文字を置き換える</h3><p><kbd>Ctrl+H</kbd> で置換欄も開きます。検索する文字と置き換える文字を入力し、［置換］または［すべて置換］を押します。読み取り専用の文書では置換できません。</p><p>［大文字と小文字を区別］と［正規表現］で検索方法を変えられます。普通に文字を探すときは［正規表現］をオフにして使ってください。</p>
+      </section>
+      <section id="settings"><h2><span class="num">11</span>設定を変える</h2>
+        <p>［ファイル］→［設定］を開きます。通常の設定は［OK］で反映し、［キャンセル］で取り消します。</p>
+        <div class="table-scroll"><table><caption>設定できること</caption><thead><tr><th scope="col">項目</th><th scope="col">内容</th></tr></thead><tbody>
+          <tr><td>表示</td><td>本文の書体、文字の大きさ（12〜32px）、行間（1.2〜2.5）を変更します。既定は BIZ UDPゴシック、16px、行間1.8です。</td></tr>
+          <tr><td>画像</td><td>画像を保存するフォルダの名前と、外部（https）画像を表示するかを指定します。既定のフォルダ名は <code>images</code> です。</td></tr>
+          <tr><td>書き方</td><td>［HTMLタグを使う］と、新規文書の改行コード（LF / CRLF）を選びます。HTMLタグの設定は、表のセル内改行の保存方法などに影響します。</td></tr>
+          <tr><td>自動バックアップ</td><td>有効・無効、入力が止まってからの秒数、書き出す間隔、バックアップを残す日数を設定します。</td></tr>
+          <tr><td>関連付け</td><td>Markdownファイルを筆屋文蔵で開くための登録・解除を行います。この［登録］［解除］は［OK］を待たず、その場で実行されます。</td></tr>
+        </tbody></table></div>
+        <p>アプリを移動したり削除したりする場合は、先に関連付けを解除してください。</p>
+      </section>
+      <section id="backup"><h2><span class="num">12</span>バックアップと復元</h2>
+        <p>自動バックアップは、保存済みの文書に加えた未保存の変更を、異常終了に備えて別に記録する機能です。既定では入力が2秒止まったとき、または編集が続いていても30秒ごとに記録します。残ったバックアップは既定で7日間保持します。</p>
+        <div class="note warning"><strong>自動バックアップは上書き保存とは別です</strong>元の文書ファイルは、<kbd>Ctrl+S</kbd> などで保存するまで更新されません。一度も保存していない新規文書は自動バックアップの対象にならないので、書き始めたら早めに名前を付けて保存してください。</div>
+        <h3>異常終了の後に復元する</h3><ol><li>編集していた文書を開きます。バックアップが残っていれば［前回保存されなかった変更があります］と表示されます。</li><li>日時を確認して［復元］を選ぶと、バックアップの内容が編集画面に戻ります。［破棄］を選ぶとバックアップは削除されます。</li><li>復元した内容を確認し、<kbd>Ctrl+S</kbd> で保存します。復元しただけでは元ファイルは変わりません。</li></ol>
+      </section>
+      <section id="shortcuts"><h2><span class="num">13</span>ショートカット一覧</h2>
+        <p class="small">キーは同時に押します。表内や検索欄など、カーソルのある場所によって動作が変わるものがあります。</p>
+        <div class="table-scroll"><table class="keys"><caption>文書と編集</caption><thead><tr><th scope="col">操作</th><th scope="col">キー</th></tr></thead><tbody>
+          <tr><td>新規ウィンドウ / 開く</td><td><kbd>Ctrl+N</kbd> / <kbd>Ctrl+O</kbd></td></tr><tr><td>保存 / 名前を付けて保存</td><td><kbd>Ctrl+S</kbd> / <kbd>Ctrl+Shift+S</kbd></td></tr><tr><td>閉じる</td><td><kbd>Ctrl+W</kbd></td></tr><tr><td>元に戻す / やり直し</td><td><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td></tr><tr><td>切り取り / コピー / 貼り付け</td><td><kbd>Ctrl+X</kbd> / <kbd>Ctrl+C</kbd> / <kbd>Ctrl+V</kbd></td></tr><tr><td>文字だけ貼り付け</td><td><kbd>Ctrl+Shift+V</kbd></td></tr><tr><td>すべて選択</td><td><kbd>Ctrl+A</kbd></td></tr><tr><td>検索 / 置換</td><td><kbd>Ctrl+F</kbd> / <kbd>Ctrl+H</kbd></td></tr><tr><td>ソース表示の切り替え</td><td><kbd>Ctrl+/</kbd></td></tr>
+        </tbody></table></div>
+        <div class="table-scroll"><table class="keys"><caption>書式と挿入</caption><thead><tr><th scope="col">操作</th><th scope="col">キー</th></tr></thead><tbody>
+          <tr><td>見出し1〜6 / 本文</td><td><kbd>Ctrl+1</kbd> 〜 <kbd>Ctrl+6</kbd> / <kbd>Ctrl+0</kbd></td></tr><tr><td>太字 / 斜体</td><td><kbd>Ctrl+B</kbd> / <kbd>Ctrl+I</kbd></td></tr><tr><td>取消線</td><td><kbd>Ctrl+Shift+X</kbd></td></tr><tr><td>文中コード（日本語配列）</td><td><kbd>Ctrl+Shift+@</kbd> ※</td></tr><tr><td>箇条書き / 番号リスト</td><td><kbd>Ctrl+Shift+]</kbd> / <kbd>Ctrl+Shift+[</kbd></td></tr><tr><td>引用</td><td><kbd>Ctrl+Shift+Q</kbd></td></tr><tr><td>表 / リンク</td><td><kbd>Ctrl+T</kbd> / <kbd>Ctrl+K</kbd></td></tr><tr><td>画像 / コードブロック</td><td><kbd>Ctrl+Shift+I</kbd> / <kbd>Ctrl+Shift+K</kbd></td></tr>
+        </tbody></table></div><p class="small">※ 文中コードのキーはキーボード配列によって異なります。［書式］→［文中コード］の横に表示されるキーを確認してください。</p>
+      </section>
+      <section id="help"><h2><span class="num">14</span>困ったときは</h2>
+        <details open><summary>書式のボタンが灰色で押せません</summary><p>太字などは文字を選んでから押します。また、表の中など、今の場所では使えない操作もあります。ソース表示中の場合は通常表示に戻して確認してください。</p></details>
+        <details open><summary>画像が表示されません</summary><p>文書と一緒に画像フォルダを移動したか、参照先の画像ファイルが残っているかを確認してください。URL参照の場合は接続状況と［外部（https）の画像を表示する］の設定を確認します。必要なら画像を右クリックして差し替えます。</p></details>
+        <details open><summary>文字化けしています</summary><p>［ファイル］→［文字コードを指定して開き直す］で、作成元の文字コードを選びます。正しく表示されることを確認してから保存してください。</p></details>
+        <details open><summary>書式を付けずに貼り付けたいです</summary><p><kbd>Ctrl+Shift+V</kbd> を使います。WordやWebからの変換を行わず、文字だけを貼り付けます。</p></details>
+        <details open><summary>終了前の内容が保存されていません</summary><p>自動バックアップは自動保存ではありません。文書を開き直して復元の確認が出るかを確認します。一度も保存していない新規文書はバックアップ対象外です。普段の保存には <kbd>Ctrl+S</kbd> を使ってください。</p></details>
+        <p>配布物や起動については<a href="https://github.com/yoken-taro/fudeya-bunzo#readme">GitHubのREADME</a>もご覧ください。</p>
+      </section>
+      <p class="back"><a href="#top">↑ 説明書の先頭へ</a></p>
+    </main>
+  </div>
+  <footer><a href="./">← 筆屋文蔵のサイトへ</a><span>筆屋文蔵 操作説明書</span></footer>
+</div>
+</body>
+</html>
