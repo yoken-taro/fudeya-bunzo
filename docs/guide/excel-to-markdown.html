@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Excelの表をMarkdownに変換する | 筆屋文蔵 使い方ガイド</title><meta name="description" content="Excelのセル範囲をコピーして筆屋文蔵へ貼り付けるだけ。表をMarkdownに変換し、編集・保存する方法を紹介します。">
+<link rel="canonical" href="https://yoken-taro.github.io/fudeya-bunzo/guide/excel-to-markdown.html"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./guide.css"></head>
+<body id="top"><a class="skip" href="#main">本文へスキップ</a><div class="wrap"><div class="topline"><a href="../#guides">← 使い方ガイド一覧へ</a><a href="../manual.html">操作説明書</a></div>
+<header class="guide-main"><div class="eyebrow">FUDEYA BUNZO / PRACTICAL GUIDE</div><h1>Excelの表をMarkdownに変換する</h1></header>
+<main id="main" class="guide-main">
+<div class="card lead-card"><p class="guide-intro">Excelの表を、コピー＆ペーストで文書へ。</p><p>Excelで作った一覧をMarkdownに載せたいとき、縦棒や区切り線を手で書く必要はありません。セル範囲をコピーして筆屋文蔵の本文に貼り付ければ、Markdownの表に変換できます。</p></div>
+<nav class="jump" aria-label="このページの目次"><a href="#convert">変換する手順</a><a href="#example">変換例</a><a href="#edit">整えて保存する</a></nav>
+<section id="convert"><h2>ExcelからMarkdownへ、3つの手順</h2><ol><li><strong>Excelで範囲を選ぶ。</strong> 見出しにしたい行を一番上に含めて、表のセル範囲を選び、<kbd>Ctrl+C</kbd> でコピーします。</li><li><strong>筆屋文蔵の本文に貼る。</strong> 通常表示で、表の外の入れたい場所にカーソルを置き、<kbd>Ctrl+V</kbd> を押します。</li><li><strong>表を確認して保存する。</strong> セルの内容を確認し、<kbd>Ctrl+S</kbd> で <code>.md</code> ファイルに保存します。</li></ol><div class="note"><strong>貼り付け先は「通常表示の本文」に</strong>コードブロックなどの中や、<kbd>Ctrl+Shift+V</kbd> の「文字だけ貼り付け」では、表への変換を行いません。すでにある表のセル内への貼り付けは、セルの編集として扱われます。</div></section>
+<section id="example"><h2>たとえば、作業一覧を貼り付ける</h2><p>Excelで次のような範囲をコピーします。最初の行が、Markdownの表の見出しになります。</p><div class="table-scroll"><table><caption>貼り付け後の表の例</caption><thead><tr><th scope="col">作業</th><th scope="col">担当</th><th scope="col">状況</th></tr></thead><tbody><tr><td>原稿を作る</td><td>佐藤</td><td>作業中</td></tr><tr><td>内容を確認する</td><td>鈴木</td><td>未着手</td></tr></tbody></table></div><p>ソース表示（<kbd>Ctrl+/</kbd>）では、このようなMarkdownの表として確認できます。区切り線などの細かな書き方は、実際の保存結果によって異なります。</p><pre><code>| 作業 | 担当 | 状況 |
+| --- | --- | --- |
+| 原稿を作る | 佐藤 | 作業中 |
+| 内容を確認する | 鈴木 | 未着手 |</code></pre></section>
+<section id="edit"><h2>貼り付けた表は、その場で編集</h2><ul><li>セルをクリックして文字を直せます。<kbd>Tab</kbd> で次のセル、<kbd>Shift+Tab</kbd> で前のセルへ移動します。</li><li>右クリックから、行や列の追加・削除、左揃え・中央揃え・右揃えを選べます。</li><li>表の前後に見出しや説明を書けば、一覧表を含む手順書や報告メモになります。</li></ul><p>操作の詳細は<a href="../manual.html#tables">操作説明書の「表を編集する」</a>をご覧ください。</p><h3>変換されるのは、文書としての表です</h3><p>Excelの計算機能やブックを持ち込む機能ではありません。数式の再計算、グラフ、セル結合、背景色や罫線などの見た目を、そのまま再現するものではありません。貼り付け後の値や表の並びを確認してください。</p><p>コピー元がExcel以外の場合や、途中でクリップボードの内容が文字だけになった場合は、表に変換されないことがあります。うまくいかないときはExcelのセル範囲を直接コピーし直して試してください。セル1つだけのコピーは文字として貼り付けられます。</p></section>
+<aside class="related card" aria-label="ほかの使い方ガイド"><h2>ほかの使い方も見る</h2><ul><li><a href="./open-md.html">MDファイルの開き方 →</a></li><li><a href="./markdown-viewer.html">無料Markdownビューアとして使う →</a></li><li><a href="./markdown-memo.html">Markdownでメモを作成する →</a></li></ul><p><a href="https://github.com/yoken-taro/fudeya-bunzo/releases/latest">筆屋文蔵を無料ダウンロード →</a></p></aside><p class="back"><a href="#top">↑ このページの先頭へ</a></p></main>
+<footer><a href="../">← 筆屋文蔵のサイトへ</a><a href="../manual.html">操作説明書</a></footer></div></body></html>
