@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Excelの表をMarkdownに変換する | 筆屋文蔵 使い方ガイド</title><meta name="description" content="Excelのセル範囲をコピーして筆屋文蔵へ貼り付けるだけ。表をMarkdownに変換し、編集・保存する方法を紹介します。">
-<link rel="canonical" href="https://yoken-taro.github.io/fudeya-bunzo/guide/excel-to-markdown.html"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./guide.css"></head>
+<title>Excelの表をMarkdownに変換する方法｜コピー＆ペーストで表作成 | 筆屋文蔵</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./guide.css">
+<meta name="description" content="Excelの表をMarkdownに変換する手順を紹介。セル範囲をコピーして筆屋文蔵へ貼り付け、表を編集してMDファイルに保存できます。変換例と、数式・装飾などの制約も説明します。">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://yoken-taro.github.io/fudeya-bunzo/guide/excel-to-markdown.html">
+<meta property="og:title" content="Excelの表をMarkdownに変換する方法｜コピー＆ペーストで表作成 | 筆屋文蔵">
+<meta property="og:description" content="Excelの表をMarkdownに変換する手順を紹介。セル範囲をコピーして筆屋文蔵へ貼り付け、表を編集してMDファイルに保存できます。変換例と、数式・装飾などの制約も説明します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://yoken-taro.github.io/fudeya-bunzo/guide/excel-to-markdown.html">
+<meta property="og:site_name" content="筆屋文蔵">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://yoken-taro.github.io/fudeya-bunzo/assets/ink-stroke.jpg">
+<meta property="og:image:secure_url" content="https://yoken-taro.github.io/fudeya-bunzo/assets/ink-stroke.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1088">
+<meta property="og:image:alt" content="筆屋文蔵公式サイトの墨の筆跡の背景ビジュアル">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Excelの表をMarkdownに変換する方法｜コピー＆ペーストで表作成 | 筆屋文蔵">
+<meta name="twitter:description" content="Excelの表をMarkdownに変換する手順を紹介。セル範囲をコピーして筆屋文蔵へ貼り付け、表を編集してMDファイルに保存できます。変換例と、数式・装飾などの制約も説明します。">
+<meta name="twitter:image" content="https://yoken-taro.github.io/fudeya-bunzo/assets/ink-stroke.jpg">
+<meta name="twitter:image:alt" content="筆屋文蔵公式サイトの墨の筆跡の背景ビジュアル">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "筆屋文蔵", "item": "https://yoken-taro.github.io/fudeya-bunzo/"}, {"@type": "ListItem", "position": 2, "name": "Excelの表をMarkdownに変換する方法", "item": "https://yoken-taro.github.io/fudeya-bunzo/guide/excel-to-markdown.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Excelの表をMarkdownに変換する方法｜コピー＆ペーストで表作成 | 筆屋文蔵", "description": "Excelの表をMarkdownに変換する手順を紹介。セル範囲をコピーして筆屋文蔵へ貼り付け、表を編集してMDファイルに保存できます。変換例と、数式・装飾などの制約も説明します。", "url": "https://yoken-taro.github.io/fudeya-bunzo/guide/excel-to-markdown.html", "inLanguage": "ja", "isPartOf": {"@type": "WebSite", "name": "筆屋文蔵", "url": "https://yoken-taro.github.io/fudeya-bunzo/"}}</script>
+</head>
 <body id="top"><a class="skip" href="#main">本文へスキップ</a><div class="wrap"><div class="topline"><a href="../#guides">← 使い方ガイド一覧へ</a><a href="../manual.html">操作説明書</a></div>
 <header class="guide-main"><div class="eyebrow">FUDEYA BUNZO / PRACTICAL GUIDE</div><h1>Excelの表をMarkdownに変換する</h1></header>
 <main id="main" class="guide-main">
@@ -13,5 +36,5 @@
 | 原稿を作る | 佐藤 | 作業中 |
 | 内容を確認する | 鈴木 | 未着手 |</code></pre></section>
 <section id="edit"><h2>貼り付けた表は、その場で編集</h2><ul><li>セルをクリックして文字を直せます。<kbd>Tab</kbd> で次のセル、<kbd>Shift+Tab</kbd> で前のセルへ移動します。</li><li>右クリックから、行や列の追加・削除、左揃え・中央揃え・右揃えを選べます。</li><li>表の前後に見出しや説明を書けば、一覧表を含む手順書や報告メモになります。</li></ul><p>操作の詳細は<a href="../manual.html#tables">操作説明書の「表を編集する」</a>をご覧ください。</p><h3>変換されるのは、文書としての表です</h3><p>Excelの計算機能やブックを持ち込む機能ではありません。数式の再計算、グラフ、セル結合、背景色や罫線などの見た目を、そのまま再現するものではありません。貼り付け後の値や表の並びを確認してください。</p><p>コピー元がExcel以外の場合や、途中でクリップボードの内容が文字だけになった場合は、表に変換されないことがあります。うまくいかないときはExcelのセル範囲を直接コピーし直して試してください。セル1つだけのコピーは文字として貼り付けられます。</p></section>
-<aside class="related card" aria-label="ほかの使い方ガイド"><h2>ほかの使い方も見る</h2><ul><li><a href="./open-md.html">MDファイルの開き方 →</a></li><li><a href="./markdown-viewer.html">無料Markdownビューアとして使う →</a></li><li><a href="./markdown-memo.html">Markdownでメモを作成する →</a></li></ul><p><a href="https://github.com/yoken-taro/fudeya-bunzo/releases/latest">筆屋文蔵を無料ダウンロード →</a></p></aside><p class="back"><a href="#top">↑ このページの先頭へ</a></p></main>
+<aside class="related card" aria-label="ほかの使い方ガイド"><h2>ほかの使い方も見る</h2><ul><li><a href="./open-md.html">MDファイルの開き方 →</a></li><li><a href="./markdown-viewer.html">無料Markdownビューアとして使う →</a></li><li><a href="./markdown-memo.html">Markdownでメモを作成する →</a></li></ul><p><a href="https://github.com/yoken-taro/fudeya-bunzo/releases/latest">筆屋文蔵を無料ダウンロード →</a></p></aside><p class="back"><a href="#top">↑ このページの先頭へ</a></p><section class="seo-download card" aria-label="筆屋文蔵のダウンロード"><h2>筆屋文蔵を使ってみる</h2><p>Windows 11用の無料Markdownエディタ・ビューア。ZIPを展開して使えます。</p><p><a class="seo-download-link" href="../#download">公式サイトで無料ダウンロードの案内を見る →</a></p><p class="small">対応環境や起動手順を確認して、最新リリースへ進めます。</p></section></main>
 <footer><a href="../">← 筆屋文蔵のサイトへ</a><a href="../manual.html">操作説明書</a></footer></div></body></html>
