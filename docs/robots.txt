@@ -1,7 +1,4 @@
-# Project-site copy. Google reads robots.txt at the host root only.
-# This file at /fudeya-bunzo/robots.txt does not control crawling.
-# Submit the sitemap URL directly in Google Search Console.
 User-agent: *
 Allow: /
 
-Sitemap: https://yoken-taro.github.io/fudeya-bunzo/sitemap.xml
+Sitemap: https://fudeya-bunzo.com/sitemap.xml

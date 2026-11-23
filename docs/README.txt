@@ -1,25 +1,18 @@
-Fudeya Bunzo - GitHub Pages
+Fudeya Bunzo - website
 
-URL: https://yoken-taro.github.io/fudeya-bunzo/
-Source: main branch, /docs
+URL: https://fudeya-bunzo.com/
+Hosting: Cloudflare Pages (Git integration with this repository)
+  Production branch: main
+  Build command: (none)
+  Build output directory: docs
 
 Static HTML, CSS and images; no build required.
-Relative asset URLs support the /fudeya-bunzo/ project path.
 Download links point to the existing GitHub Releases.
 
-Settings > Pages > Build and deployment:
-Source: Deploy from a branch
-Branch: main /docs
-
-No application source, release, tag or build configuration changes required.
-.nojekyll disables Jekyll processing.
-Project-level robots.txt is included from the original, but crawlers use
-/robots.txt at the host root, so it cannot control project-level crawling.
+_headers  : security headers (CSP etc.) applied by Cloudflare Pages.
+            If index.html's inline <script> changes, update its sha256 hash in the CSP.
+404.html  : served for unknown paths (prevents Pages' SPA fallback).
 Google Fonts requires an internet connection.
 
 SEO: sitemap.xml lists the six canonical public pages.
-Submit https://yoken-taro.github.io/fudeya-bunzo/sitemap.xml in Search Console.
-Use a URL-prefix property: https://yoken-taro.github.io/fudeya-bunzo/
-The homepage head includes a SEARCH_CONSOLE_VERIFICATION insertion marker.
-Insert your Google-provided verification meta tag there; keep it after verification.
-The local seo-review folder contains setup instructions and review materials.
+Search Console: Domain property fudeya-bunzo.com (DNS TXT verification).
