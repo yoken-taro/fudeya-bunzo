@@ -8,22 +8,23 @@
 - 表は表のまま編集できます。ツールバー・メニュー・右クリック・ショートカットで書式を付けられます
 - Excel・Word・Web ページからの貼り付けを Markdown にします
 - 画像の貼り付け・ドラッグ＆ドロップ、検索・置換、文字数、自動バックアップ
+- PDF に書き出せます（用紙は A4・B5・A3、縦・横、ページ番号を選べます）
 - インストール不要（ZIP を解凍して起動するだけ）。管理者の権限は要りません
 - 利用状況の送信や更新の確認などの通信はしません（文書の中にある https の画像だけは、表示するために読み込みます。設定で切れます）
 
 ## ダウンロード
 
-[Releases](../../releases/latest) から `fudeya-bunzo-1.0.4-windows-x64.zip` をダウンロードしてください。
+[Releases](../../releases/latest) から `fudeya-bunzo-1.1.0-windows-x64.zip` をダウンロードしてください。
 
-| 版 | 1.0.4 |
+| 版 | 1.1.0 |
 |---|---|
 | 対応 OS | Windows 11（64 ビット） |
-| SHA256 | `78738fd684229b1145aa9134149442e9bd3c0495c086e292da8ccfc1623bc174` |
+| SHA256 | `b981775888f579e4cca8078b21d8c4ae242ca78d2d5c099ae45aaa4592ac7a2f` |
 
 SHA256 は、PowerShell で次のように確かめられます（表の値と同じなら、ダウンロードしたファイルは配布したものと同じです）。
 
 ```powershell
-Get-FileHash .\fudeya-bunzo-1.0.4-windows-x64.zip -Algorithm SHA256
+Get-FileHash .\fudeya-bunzo-1.1.0-windows-x64.zip -Algorithm SHA256
 ```
 
 ## 使い始め方
