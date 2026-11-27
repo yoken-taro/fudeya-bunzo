@@ -15,11 +15,11 @@ a.go{display:inline-block;margin-top:1rem;padding:.7rem 1.4rem;background:#1f1b1
 <h1>筆屋文蔵の公式サイトは移転しました</h1>
 <p>いつもご覧いただきありがとうございます。<br>公式サイトは、新しいアドレスに引っ越しました。</p>
 <p class="url" id="u">https://fudeya-bunzo.com/</p>
-<p class="small">5秒後に、新しいサイトの「対応するページ」へ自動で移動します。<br>ブックマークの登録先も、新しいアドレスへの変更をお願いします。</p>
+<p class="small">新しいサイトの「対応するページ」へ自動で移動します。<br>ブックマークの登録先も、新しいアドレスへの変更をお願いします。</p>
 <a class="go" id="go" href="https://fudeya-bunzo.com/">新しいサイトへ移動する →</a>
 </main><script>(function(){var m={'':'/','index.html':'/','manual.html':'/manual','manual':'/manual'};
 var p=location.pathname.replace(/^\/fudeya-bunzo\/?/,'');var d=m[p];
 if(!d){d='/'+p.replace(/\.html$/,'').replace(/\/index$/,'/');}
 var u='https://fudeya-bunzo.com'+d+location.search+location.hash;
 var a=document.getElementById('go');a.href=u;document.getElementById('u').textContent=u;
-setTimeout(function(){location.replace(u)},5000);})();</script></body></html>
+location.replace(u);})();</script></body></html>
