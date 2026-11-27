@@ -14,17 +14,17 @@
 
 ## ダウンロード
 
-[Releases](../../releases/latest) から `fudeya-bunzo-1.1.0-windows-x64.zip` をダウンロードしてください。
+[Releases](../../releases/latest) から `fudeya-bunzo-1.1.1-windows-x64.zip` をダウンロードしてください。
 
-| 版 | 1.1.0 |
+| 版 | 1.1.1 |
 |---|---|
 | 対応 OS | Windows 11（64 ビット） |
-| SHA256 | `b981775888f579e4cca8078b21d8c4ae242ca78d2d5c099ae45aaa4592ac7a2f` |
+| SHA256 | `b2d3a7f97530a4b9ec2731b9aa7503e67478bca11510d2bed7155031fde2c9af` |
 
 SHA256 は、PowerShell で次のように確かめられます（表の値と同じなら、ダウンロードしたファイルは配布したものと同じです）。
 
 ```powershell
-Get-FileHash .\fudeya-bunzo-1.1.0-windows-x64.zip -Algorithm SHA256
+Get-FileHash .\fudeya-bunzo-1.1.1-windows-x64.zip -Algorithm SHA256
 ```
 
 ## 使い始め方
